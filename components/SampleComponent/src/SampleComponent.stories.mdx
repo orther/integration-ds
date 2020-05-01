@@ -1,0 +1,26 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { withDocs } from '@storybook/addon-docs';
+
+import  SampleComponent  from '.';
+import notes from '../README.md';
+
+<Meta
+  title="Docs/Components|SampleComponent"
+  // component={SampleComponent}
+  parameters={{notes}}
+  decorators={[withDocs]}
+/>
+
+# SampleComponent
+
+With `MDX` we can define a story for `SampleComponent` right in the middle of our
+markdown documentation--BUT we don't!
+
+
+```
+<Preview>
+  <Story name="No Value">
+    <SampleComponent />
+  </Story>
+</Preview>
+```
